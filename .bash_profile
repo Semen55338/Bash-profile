@@ -20,11 +20,11 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
  
-# Include ~/.config/bashrc.d/* if it exists
-if [ -d ~/.config/bashrc.d ]; then
-	for i in `ls ~/.config/bashrc.d/` ; do
-		if [[ -f ~/.config/bashrc.d/${i} ]]; then
-			. ~/.config/bashrc.d/${i}
+# Include ~/.bashrc.d/* if it exists
+if [ -d ~/.bashrc.d ]; then
+	for i in `ls ~/.bashrc.d/` ; do
+		if [[ -f ~/.bashrc.d/${i} ]]; then
+			. ~/.bashrc.d/${i}
 		fi
 	done
 	unset i
