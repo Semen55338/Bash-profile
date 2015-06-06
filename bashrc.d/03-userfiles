@@ -1,0 +1,16 @@
+#----------------------------------------------------------------------------
+# ~/.config/bashrc.d/03-userfiles: executed by .bash_profile for user files
+# $Revision: 2.00 (CentOS/OS X Edition by Wakko Warner) $
+# $Comment: Any comments please send to wakko@acmelabs.spb..ru $
+#----------------------------------------------------------------------------
+ 
+# User specific environment and startup programs
+if [ -d $HOME/bin ]; then
+	PATH=$PATH:$HOME/bin
+	export PATH
+fi
+# do the same with MANPATH
+if [ -d $HOME/man ]; then
+	MANPATH=${MANPATH:-:}:$HOME/man
+	export MANPATH
+fi

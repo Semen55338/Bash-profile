@@ -1,0 +1,17 @@
+#----------------------------------------------------------------------------
+# ~/.config/bashrc.d/99-other: executed by .bash_profile for other settings
+# $Revision: 2.20 (CentOS/OS X Edition by Wakko Warner) $
+# $Comment: Any comments please send to wakko@acmelabs.spb.ru $
+#----------------------------------------------------------------------------
+ 
+# Don't put duplicate and garbage lines from Midnight Commander to the history.
+export HISTCONTROL="ignoreboth"
+ 
+# Check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+ 
+# Make less more friendly for non-text input files, see lesspipe(1)
+#[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
+# PHP Autoconf
+PHP_AUTOCONF="/usr/bin/autoconf"
