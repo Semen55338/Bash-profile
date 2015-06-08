@@ -19,7 +19,7 @@ alias su='su -'
 alias sudo='sudo -s'
 alias showextip='curl http://ipecho.net/plain; echo'
 alias watch='watch '
-alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
+alias which='alias | which --tty-only --read-alias --show-dot --show-tilde'
 alias who='who -HuT'
 alias vim='vim -u $(echo ~artem)/.vimrc'
 
