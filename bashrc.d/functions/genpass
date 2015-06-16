@@ -1,0 +1,4 @@
+#!/bin/bash
+genpass() {
+    tr -dc A-Za-z0-9 < /dev/urandom | head -c 17 | xargs | cut --output-delimiter=$'-' -c1-4,5-8,9-12,13-16
+}
