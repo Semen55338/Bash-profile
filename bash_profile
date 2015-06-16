@@ -1,9 +1,3 @@
-#----------------------------------------------------------------------------
-# ~/.bash_profile: executed by bash(1) for login shells.
-# $Revision: 2.20 (CentOS/OS X Edition by Wakko Warner) $
-# $Comment: Any comments please send to wakko@acmelabs.spb.ru $
-#----------------------------------------------------------------------------
- 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
  
@@ -21,12 +15,26 @@ if [ -f /etc/bashrc ]; then
 fi
  
 # Include ~/.bashrc.d/* if it exists
-if [ -d ~/.bashrc.d ]; then
-	for i in `ls ~/.bashrc.d/` ; do
-		if [[ -f ~/.bashrc.d/${i} ]]; then
-			. ~/.bashrc.d/${i}
-		fi
-	done
-	unset i
-fi
+load_bashrc_files() {
+    declare -a files=(
+        $HOME/.bashrc.d/aliases
+        $HOME/.bashrc.d/paths
+        $HOME/.bashrc.d/terminal
+        $HOME/.bashrc.d/userfiles
+        $HOME/.bashrc.d/other
+        $HOME/.bashrc.d/functions/* # Functions
+        $HOME/.bash_profile.local # Local and private settings not under version control (e.g. git credentials)
+    )
+
+    # if these files are readable, source them
+    for index in ${!files[*]}
+    do
+        if [[ -r ${files[$index]} ]]; then
+            source ${files[$index]}
+        fi
+    done
+}
+
+load_bashrc_files
+unset load_bashrc_files
 PHP_AUTOCONF="/usr/bin/autoconf"
