@@ -1,9 +1,4 @@
-#----------------------------------------------------------------------------
-# ~/.config/bashrc.d/02-terminal: executed by .bash_profile for terminal settings
-# $Revision: 2.20 (CentOS/OS X Edition by Wakko Warner) $
-# $Comment: Any comments please send to wakko@acmelabs.spb..ru $
-#----------------------------------------------------------------------------
- 
+#! /bin/bash
 # Set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 	debian_chroot=$(cat /etc/debian_chroot)
@@ -45,3 +40,5 @@ else
 		PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 	fi
 fi
+
+set -o vi
