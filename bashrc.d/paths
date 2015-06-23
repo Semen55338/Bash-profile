@@ -2,8 +2,6 @@
 
 # bash_paths
 
-echo "...~/.dotfiles/shell/bash_paths loaded."
-
 export GOPATH=$HOME/projects/go
 
 # Directories to be prepended to PATH
