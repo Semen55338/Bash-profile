@@ -10,7 +10,7 @@ echo "makesymlinks.sh begun."
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles/dotfiles_old             # old dotfiles backup directory
-files="bashrc bashrc.d bash_profile bash_logout profile vimrc.local"    # list of files/folders to symlink in homedir
+files="bashrc bashrc.d bash_profile bash_logout profile vimrc.local gitignore"    # list of files/folders to symlink in homedir
 
 #### Create Directories
 
@@ -23,12 +23,12 @@ cd $dir
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 echo "...Creating symlinks in home directory."
 for file in $files; do
-        if [ -L ~/.$file  ]; then unlink ~/.$file; echo "......Unlinking ~$file."; fi
-            if [ -s ~/.$file  ]; then cp ~/.$file $olddir; echo "......Copying old ~$file ~ to $olddir."; fi
-                if [ -s ~/.$file  ]; then rm ~/.$file; echo "......Removing old ~$file."; fi
-                    if [ -s $dir/$file  ]; then ln -s $dir/$file ~/.$file; echo "......Adding symlink to for ~$file from $dir."; fi
-                done
+    if [ -L ~/.$file  ]; then unlink ~/.$file; echo "......Unlinking ~$file."; fi
+    if [ -s ~/.$file  ]; then cp ~/.$file $olddir; echo "......Copying old ~$file ~ to $olddir."; fi
+    if [ -s ~/.$file  ]; then rm ~/.$file; echo "......Removing old ~$file."; fi
+    if [ -s $dir/$file  ]; then ln -s $dir/$file ~/.$file; echo "......Adding symlink to for ~$file from $dir."; fi
+done
 
-                echo "...All symlinks created."
+echo "...All symlinks created."
 
-                echo "makesymlinks.sh complete."
+echo "makesymlinks.sh complete."
