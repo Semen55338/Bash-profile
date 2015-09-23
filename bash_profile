@@ -20,7 +20,6 @@ load_bashrc_files() {
         $HOME/.bashrc.d/aliases
         $HOME/.bashrc.d/paths
         $HOME/.bashrc.d/terminal
-        $HOME/.bashrc.d/userfiles
         $HOME/.bashrc.d/other
         $HOME/.bashrc.d/functions/* # Functions
         $HOME/.bash_profile.local # Local and private settings not under version control (e.g. git credentials)
@@ -37,4 +36,3 @@ load_bashrc_files() {
 
 load_bashrc_files
 unset load_bashrc_files
-PHP_AUTOCONF="/usr/bin/autoconf"
