@@ -8,6 +8,8 @@ echo "makesymlinks.sh begun."
 
 #### Variables
 
+# cp .profile only if ubuntu
+
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles/dotfiles_old             # old dotfiles backup directory
 files="bashrc bashrc.d bash_profile bash_logout profile vimrc.local gitignore"    # list of files/folders to symlink in homedir

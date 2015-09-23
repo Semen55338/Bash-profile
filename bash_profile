@@ -36,3 +36,5 @@ load_bashrc_files() {
 
 load_bashrc_files
 unset load_bashrc_files
+
+# комментарий хуентарий
