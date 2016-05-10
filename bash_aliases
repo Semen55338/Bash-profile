@@ -8,3 +8,8 @@ alias less='less -r'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+
+# Management services like a RHEL\Centos
+if [[ `uname` == 'Darwin' ]]; then
+  alias systemctl='brew services'
+fi
