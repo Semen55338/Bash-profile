@@ -1,18 +1,29 @@
-#----------------------------------------------------------------------------
-# ~/.config/bashrc.d/99-other: executed by .bash_profile for other settings
-# $Revision: 2.20 (CentOS/OS X Edition by Wakko Warner) $
-# $Comment: Any comments please send to wakko@acmelabs.spb.ru $
-#----------------------------------------------------------------------------
- 
-# Don't put duplicate and garbage lines from Midnight Commander to the history.
-export HISTCONTROL="ignoreboth"
- 
-# Check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
- 
-# Make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
+# Use vim, installed from Brew, as the default editor
+export EDITOR="/usr/local/bin/vim"
+
+# Ignore duplicate commands in the history
+export HISTCONTROL=ignoredups
+
+# Increase the maximum number of lines contained in the history file
+# (default is 500)
+export HISTFILESIZE=10000
+
+# Increase the maximum number of commands to remember
+# (default is 500)
+export HISTSIZE=10000
+
+# Make some commands not show up in history
+# `&:` prev
+export HISTIGNORE="&:ls:ls *:la:la *:lt:lt *:cd:cd -:pwd;exit:date:* --help"
+
+# Don't clear the screen after quitting a manual page
+export MANPAGER="less -X"
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+
+# Make new shells get the history lines from all previous
+# shells instead of the default "last window closed" history
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
 # PHP Autoconf
-PHP_AUTOCONF="/usr/bin/autoconf"
-PHP_AUTOCONF="/usr/local/bin/autoconf"
+export PHP_AUTOCONF="/usr/local/bin/autoconf"

@@ -1,4 +1,3 @@
-#/bin/bash
 #Colored output for 'ls' and 'grep'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
