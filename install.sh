@@ -5,7 +5,6 @@ load_bash_profile_files() {
     declare -a files=(
         $HOME/.bashrc.d/bash_colors # Custom color
         $HOME/.bashrc.d/bash_prompt # Custom bash prompt
-        $(brew --prefix)/etc/bash_completion # Bash completion (installed via Homebrew)
     )
 
     # if these files are readable, source them
