@@ -1,5 +1,5 @@
 ## Unified Bash Profile
 
-Linux
-Mac OS
-Cygwin
+- Linux
+- Mac OS
+- Cygwin
