@@ -1,3 +1,4 @@
+#!/bin/bash
 ## Solarized-dark colors for GNU-based ls
 ## https://github.com/seebi/dircolors-solarized.git
 eval `$(brew --prefix)/opt/coreutils/libexec/gnubin/dircolors ~/.bashrc.d/lib/dircolors.ansi-universal`
