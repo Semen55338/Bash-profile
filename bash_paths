@@ -21,7 +21,7 @@ declare -a dirs_to_append=(
     "$HOME/.rvm/bin"
     "$GOPATH/bin"
     "$(brew --prefix)/share/npm/bin" # Add npm-installed package bin
-    "$(brew --prefix homebrew/php/php70)/bin" # PHP CLI
+    #"$(brew --prefix homebrew/php/php70)/bin" # PHP CLI
 )
 
 # Prepend directories to PATH

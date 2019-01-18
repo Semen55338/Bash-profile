@@ -1,6 +1,6 @@
 ## Solarized-dark colors for GNU-based ls
 ## https://github.com/seebi/dircolors-solarized.git
-eval `dircolors ~/.bashrc.d/lib/dircolors.ansi-universal`
+eval `$(brew --prefix)/opt/coreutils/libexec/gnubin/dircolors ~/.bashrc.d/lib/dircolors.ansi-universal`
 
 ## If Generic Colourizer (GRC) is installed (brew install grc)
 ## http://kassiopeia.juls.savba.sk/~garabik/software/grc.html
